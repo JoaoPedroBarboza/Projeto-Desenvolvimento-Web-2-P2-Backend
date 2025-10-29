@@ -1,7 +1,7 @@
 var jwt = require('jsonwebtoken');
 
 exports.gerarTokenJwt = async function (idUsuario) {
-   return jwt.sign({ 'CodUsuario': idUsuario }, 'Componente@Programacao-Web-II', { expiresIn: 3600 });
+   return jwt.sign({ 'CodUsuario': idUsuario }, 'Componente@Programacao-Web-II', { expiresIn: 60 });
 };
 
 exports.verificaTokenJwt = async function (req, res, next) {
